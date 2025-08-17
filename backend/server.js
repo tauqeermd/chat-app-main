@@ -62,7 +62,7 @@ app.use("/api/messages", messageRoutes); // middleware for messages
 app.use("/api/users", userRoutes);
 app.use("/api/password", passwordRoutes); // middleware for password reset functionality
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.get("*", (req, res) =>{
     res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 })
